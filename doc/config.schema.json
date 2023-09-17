@@ -1,0 +1,156 @@
+{
+  "$ref": "#/definitions/ConfigRoot",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "definitions": {
+    "ConfigProject": {
+      "additionalProperties": false,
+      "properties": {
+        "accentColor": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "image": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "tags": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "url": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "description",
+        "tags",
+        "image"
+      ],
+      "type": "object"
+    },
+    "ConfigRoot": {
+      "additionalProperties": false,
+      "properties": {
+        "education": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "experiences": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "header": {
+          "additionalProperties": false,
+          "properties": {
+            "backdrop": {
+              "anyOf": [
+                {
+                  "additionalProperties": false,
+                  "properties": {
+                    "type": {
+                      "const": "image",
+                      "type": "string"
+                    },
+                    "url": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "type",
+                    "url"
+                  ],
+                  "type": "object"
+                },
+                {
+                  "additionalProperties": false,
+                  "properties": {
+                    "color": {
+                      "type": "string"
+                    },
+                    "type": {
+                      "const": "color",
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "type",
+                    "color"
+                  ],
+                  "type": "object"
+                }
+              ]
+            },
+            "image": {
+              "type": "string"
+            },
+            "name": {
+              "type": "string"
+            },
+            "subheader": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "name",
+            "subheader",
+            "image",
+            "backdrop"
+          ],
+          "type": "object"
+        },
+        "palette": {
+          "additionalProperties": false,
+          "properties": {
+            "accent": {
+              "type": "string"
+            },
+            "background": {
+              "type": "string"
+            },
+            "primary": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "background",
+            "primary",
+            "accent"
+          ],
+          "type": "object"
+        },
+        "projects": {
+          "items": {
+            "$ref": "#/definitions/ConfigProject"
+          },
+          "type": "array"
+        },
+        "skills": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        }
+      },
+      "required": [
+        "header",
+        "skills",
+        "education",
+        "experiences",
+        "projects",
+        "palette"
+      ],
+      "type": "object"
+    }
+  }
+}

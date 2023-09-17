@@ -1,36 +1,39 @@
 {
-  "name": "abbystrawby",
-  "private": true,
-  "version": "0.0.0",
-  "type": "module",
-  "scripts": {
-    "dev": "vite",
-    "build": "tsc && vite build",
-    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
-  },
-  "dependencies": {
-    "@emotion/react": "^11.11.1",
-    "@mantine/carousel": "^6.0.21",
-    "@mantine/core": "^6.0.21",
-    "@mantine/hooks": "^6.0.21",
-    "@mantine/modals": "^6.0.21",
-    "embla-carousel-react": "^8.0.0-rc13",
-    "prettier": "^3.0.3",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "simpler-color": "^1.0.1"
-  },
-  "devDependencies": {
-    "@types/react": "^18.2.15",
-    "@types/react-dom": "^18.2.7",
-    "@typescript-eslint/eslint-plugin": "^6.0.0",
-    "@typescript-eslint/parser": "^6.0.0",
-    "@vitejs/plugin-react-swc": "^3.3.2",
-    "eslint": "^8.45.0",
-    "eslint-plugin-react-hooks": "^4.6.0",
-    "eslint-plugin-react-refresh": "^0.4.3",
-    "typescript": "^5.0.2",
-    "vite": "^4.4.5"
-  }
+    "name": "abbystrawby",
+    "private": true,
+    "version": "0.0.0",
+    "type": "module",
+    "scripts": {
+        "dev": "vite",
+        "build": "tsc && vite build",
+        "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+        "preview": "vite preview",
+        "doc": "ts-json-schema-generator -f tsconfig.json --path 'src/types/config.ts' --type 'ConfigRoot' -o 'doc/config.schema.json'"
+    },
+    "dependencies": {
+        "@emotion/react": "^11.11.1",
+        "@mantine/carousel": "^6.0.21",
+        "@mantine/core": "^6.0.21",
+        "@mantine/hooks": "^6.0.21",
+        "@mantine/modals": "^6.0.21",
+        "embla-carousel-react": "^8.0.0-rc13",
+        "prettier": "^3.0.3",
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0",
+        "simpler-color": "^1.0.1"
+    },
+    "devDependencies": {
+        "@types/react": "^18.2.15",
+        "@types/react-dom": "^18.2.7",
+        "@typescript-eslint/eslint-plugin": "^6.0.0",
+        "@typescript-eslint/parser": "^6.0.0",
+        "@vitejs/plugin-react-swc": "^3.3.2",
+        "eslint": "^8.45.0",
+        "eslint-plugin-react-hooks": "^4.6.0",
+        "eslint-plugin-react-refresh": "^0.4.3",
+        "sass": "^1.67.0",
+        "ts-json-schema-generator": "^1.3.0",
+        "typescript": "^5.0.2",
+        "vite": "^4.4.5"
+    }
 }
