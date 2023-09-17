@@ -5,9 +5,6 @@
     "ConfigProject": {
       "additionalProperties": false,
       "properties": {
-        "accentColor": {
-          "type": "string"
-        },
         "description": {
           "type": "string"
         },
@@ -38,6 +35,9 @@
     "ConfigRoot": {
       "additionalProperties": false,
       "properties": {
+        "defaultTheme": {
+          "type": "string"
+        },
         "education": {
           "items": {
             "type": "string"
@@ -109,26 +109,6 @@
           ],
           "type": "object"
         },
-        "palette": {
-          "additionalProperties": false,
-          "properties": {
-            "accent": {
-              "type": "string"
-            },
-            "background": {
-              "type": "string"
-            },
-            "primary": {
-              "type": "string"
-            }
-          },
-          "required": [
-            "background",
-            "primary",
-            "accent"
-          ],
-          "type": "object"
-        },
         "projects": {
           "items": {
             "$ref": "#/definitions/ConfigProject"
@@ -140,6 +120,12 @@
             "type": "string"
           },
           "type": "array"
+        },
+        "themes": {
+          "additionalProperties": {
+            "$ref": "#/definitions/ThemeConfig"
+          },
+          "type": "object"
         }
       },
       "required": [
@@ -148,9 +134,176 @@
         "education",
         "experiences",
         "projects",
-        "palette"
+        "themes",
+        "defaultTheme"
       ],
       "type": "object"
+    },
+    "ThemeConfig": {
+      "additionalProperties": false,
+      "properties": {
+        "backgroundImage": {
+          "type": "string"
+        },
+        "colors": {
+          "additionalProperties": false,
+          "properties": {
+            "accent": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "items": {
+                    "type": "string"
+                  },
+                  "type": "array"
+                }
+              ]
+            },
+            "background": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "items": {
+                    "type": "string"
+                  },
+                  "type": "array"
+                }
+              ]
+            },
+            "primary": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "items": {
+                    "type": "string"
+                  },
+                  "type": "array"
+                }
+              ]
+            }
+          },
+          "required": [
+            "background",
+            "primary",
+            "accent"
+          ],
+          "type": "object"
+        },
+        "conditions": {
+          "additionalProperties": false,
+          "properties": {
+            "date": {
+              "additionalProperties": false,
+              "properties": {
+                "day": {
+                  "type": "number"
+                },
+                "hour": {
+                  "type": "number"
+                },
+                "minute": {
+                  "type": "number"
+                },
+                "month": {
+                  "type": "number"
+                }
+              },
+              "required": [
+                "month"
+              ],
+              "type": "object"
+            },
+            "project": {
+              "type": "string"
+            }
+          },
+          "type": "object"
+        },
+        "overrides": {
+          "additionalProperties": false,
+          "properties": {
+            "banner": {
+              "$ref": "#/definitions/ThemeOverride"
+            },
+            "carousel": {
+              "$ref": "#/definitions/ThemeOverride"
+            },
+            "footer": {
+              "$ref": "#/definitions/ThemeOverride"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "required": [
+        "conditions",
+        "colors"
+      ],
+      "type": "object"
+    },
+    "ThemeOverride": {
+      "anyOf": [
+        {
+          "additionalProperties": false,
+          "properties": {
+            "color": {
+              "type": "string"
+            },
+            "type": {
+              "const": "color",
+              "type": "string"
+            }
+          },
+          "required": [
+            "type",
+            "color"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "colors": {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "type": {
+              "const": "gradient",
+              "type": "string"
+            }
+          },
+          "required": [
+            "type",
+            "colors"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "type": {
+              "const": "image",
+              "type": "string"
+            },
+            "url": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "type",
+            "url"
+          ],
+          "type": "object"
+        }
+      ]
     }
   }
 }

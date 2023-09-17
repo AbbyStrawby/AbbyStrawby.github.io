@@ -17,12 +17,14 @@
         "@mantine/hooks": "^6.0.21",
         "@mantine/modals": "^6.0.21",
         "embla-carousel-react": "^8.0.0-rc13",
+        "lodash": "^4.17.21",
         "prettier": "^3.0.3",
         "react": "^18.2.0",
         "react-dom": "^18.2.0",
         "simpler-color": "^1.0.1"
     },
     "devDependencies": {
+        "@types/lodash": "^4.14.198",
         "@types/react": "^18.2.15",
         "@types/react-dom": "^18.2.7",
         "@typescript-eslint/eslint-plugin": "^6.0.0",

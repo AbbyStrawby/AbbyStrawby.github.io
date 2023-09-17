@@ -11,10 +11,16 @@
     "education": ["School", "RIT"],
     "experiences": ["Lots", "Of", "Them"],
     "skills": ["Being Smart", "Game Design"],
-    "palette": {
-        "background": "#424242",
-        "primary": "#FE46A8",
-        "accent": "#FE9C46"
+    "projects": [],
+    "themes": {
+        "default": {
+            "conditions": {},
+            "colors": {
+                "background": "#424242",
+                "primary": "#FE46A8",
+                "accent": "#FE9C46"
+            }
+        }
     },
-    "projects": []
+    "defaultTheme": "default"
 }

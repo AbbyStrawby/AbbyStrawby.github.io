@@ -17,11 +17,8 @@ export type ConfigRoot = {
     education: string[];
     experiences: string[];
     projects: ConfigProject[];
-    palette: {
-        background: string;
-        primary: string;
-        accent: string;
-    };
+    themes: { [key: string]: ThemeConfig };
+    defaultTheme: string;
 };
 
 export type ConfigProject = {
@@ -30,5 +27,41 @@ export type ConfigProject = {
     tags: string[];
     url?: string;
     image: string;
-    accentColor?: string;
+};
+
+export type ThemeOverride =
+    | {
+          type: "color";
+          color: string;
+      }
+    | {
+          type: "gradient";
+          colors: string[];
+      }
+    | {
+          type: "image";
+          url: string;
+      };
+
+export type ThemeConfig = {
+    conditions: {
+        date?: {
+            month: number;
+            day?: number;
+            hour?: number;
+            minute?: number;
+        };
+        project?: string;
+    };
+    colors: {
+        background: string | string[];
+        primary: string | string[];
+        accent: string | string[];
+    };
+    backgroundImage?: string;
+    overrides?: Partial<{
+        banner: ThemeOverride;
+        footer: ThemeOverride;
+        carousel: ThemeOverride;
+    }>;
 };
