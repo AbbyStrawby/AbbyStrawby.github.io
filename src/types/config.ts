@@ -1,24 +1,26 @@
 export type ConfigRoot = {
-    header: {
-        name: string; // Name (ie Abby)
-        subheader: string; // Information to write under name
-        image: string; // URI to header profile image
-        backdrop:
-            | {
-                  type: "image";
-                  url: string;
-              }
-            | {
-                  type: "color";
-                  color: string;
-              };
-    };
+    header: ConfigHeader;
     skills: string[];
     education: string[];
     experiences: string[];
     projects: ConfigProject[];
     themes: { [key: string]: ThemeConfig };
     defaultTheme: string;
+};
+
+export type ConfigHeader = {
+    name: string; // Name (ie Abby)
+    subheader: string; // Information to write under name
+    image: string; // URI to header profile image
+    backdrop:
+        | {
+              type: "image";
+              url: string;
+          }
+        | {
+              type: "color";
+              color: string;
+          };
 };
 
 export type ConfigProject = {

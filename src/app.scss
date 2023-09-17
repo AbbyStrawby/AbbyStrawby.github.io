@@ -1,0 +1,59 @@
+.app-root {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 0px;
+    margin: 0px;
+
+    .app-header {
+        position: relative;
+        display: inline-block;
+        width: 100%;
+        height: 256px;
+        background-size: 100%;
+
+        .header-overlay {
+            backdrop-filter: blur(4px);
+            background: linear-gradient(0.25turn, #00000000, #000000cc 67%);
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            display: inline-block;
+            width: 100%;
+            height: 100%;
+            user-select: none;
+
+            .header-img {
+                position: absolute;
+                top: 50%;
+                right: 32px;
+                display: inline-block;
+                width: auto !important;
+                height: 75%;
+                transform: translate(0, -50%);
+                border-radius: 50%;
+            }
+
+            .header-text {
+                position: absolute;
+                top: 50%;
+                right: calc(0.75 * 256px + 64px);
+                transform: translate(0, -50%);
+                text-align: right;
+
+                .mantine-Text-root {
+                    font-weight: 300;
+                }
+            }
+        }
+    }
+
+    .mantine-AppShell-main {
+        padding: 0px;
+    }
+}
