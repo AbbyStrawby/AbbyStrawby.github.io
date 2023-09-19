@@ -37,6 +37,15 @@
                 height: 75%;
                 transform: translate(0, -50%);
                 border-radius: 50%;
+
+                @media screen and (max-width: 800px) {
+                    & {
+                        height: 50%;
+                        top: 16px;
+                        left: 50%;
+                        transform: translate(-50%, 0);
+                    }
+                }
             }
 
             .header-text {
@@ -46,8 +55,25 @@
                 transform: translate(0, -50%);
                 text-align: right;
 
-                .mantine-Text-root {
-                    font-weight: 300;
+                .mantine-Title-root {
+                    font-weight: 400;
+                }
+
+                @media screen and (max-width: 800px) {
+                    & {
+                        position: absolute;
+                        top: calc(32px + 50%);
+                        left: 50%;
+                        width: fit-content;
+                        transform: translate(-50%, 0);
+                        text-align: center;
+
+                        .mantine-Title-root {
+                            font-weight: 400;
+                            font-size: 1.2em;
+                            white-space: nowrap;
+                        }
+                    }
                 }
             }
         }
