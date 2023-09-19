@@ -16,14 +16,16 @@ import {
 
 import "./app.scss";
 import { ListCategory } from "./components/ListCategory";
-import { useMemo } from "react";
+import { useMemo, useState } from "react";
+import { Carousel } from "@mantine/carousel";
+import { CarouselSlide } from "./components/CarouselSlide";
 
 function ApplicationBody() {
     const theme = useTheme();
     const config = useConfig();
+    const [project, setProject] = useState(0);
 
     const normalizedTheme = useMemo(() => createTheme(theme), [theme]);
-    console.log(normalizedTheme);
 
     return (
         <>
@@ -61,12 +63,42 @@ function ApplicationBody() {
                         spacing="xs"
                         verticalSpacing="sm"
                         p="xs"
-                        style={{ marginTop: "-8px" }}
+                        style={{
+                            marginTop: "8px",
+                        }}
                     >
                         <ListCategory category="skills" />
                         <ListCategory category="experiences" />
                         <ListCategory category="education" />
                     </SimpleGrid>
+                    <Box className="project-box" p="md">
+                        <div
+                            style={{
+                                display: "flex",
+                                width: "100%",
+                                height: "100%",
+                            }}
+                        >
+                            <Carousel
+                                slideGap={"md"}
+                                loop
+                                slideSize="75%"
+                                onSlideChange={setProject}
+                                height={"100%"}
+                                style={{ flex: 1 }}
+                                withIndicators
+                            >
+                                {config.projects.map((p, i) => (
+                                    <CarouselSlide
+                                        project={p}
+                                        key={i}
+                                        index={i}
+                                        currentSlide={project}
+                                    />
+                                ))}
+                            </Carousel>
+                        </div>
+                    </Box>
                 </AppShell>
             </MantineProvider>
         </>
