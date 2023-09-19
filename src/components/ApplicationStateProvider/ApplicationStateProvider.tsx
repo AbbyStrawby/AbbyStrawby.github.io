@@ -69,8 +69,9 @@ export function ApplicationStateProvider({
                         ? (selectedTheme.colors.accent as any)
                         : generateShades(selectedTheme.colors.accent),
                 },
-                colorScheme: "dark",
                 primaryColor: "primary",
+                primaryShade: 5,
+                fontFamily: "Courier, monospace",
             });
         }
     }, [selectedProject, config]);

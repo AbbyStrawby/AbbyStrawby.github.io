@@ -12,15 +12,16 @@
     },
     "dependencies": {
         "@emotion/react": "^11.11.1",
-        "@mantine/carousel": "^6.0.21",
-        "@mantine/core": "^6.0.21",
-        "@mantine/hooks": "^6.0.21",
-        "@mantine/modals": "^6.0.21",
+        "@mantine/carousel": "^7.0.0",
+        "@mantine/core": "^7.0.0",
+        "@mantine/hooks": "^7.0.0",
+        "@mantine/modals": "^7.0.0",
         "embla-carousel-react": "^8.0.0-rc13",
         "lodash": "^4.17.21",
         "prettier": "^3.0.3",
         "react": "^18.2.0",
         "react-dom": "^18.2.0",
+        "react-icons": "^4.11.0",
         "simpler-color": "^1.0.1"
     },
     "devDependencies": {
