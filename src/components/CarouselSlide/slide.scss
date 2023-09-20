@@ -69,7 +69,6 @@
                     flex-grow: 2;
                     max-width: 40%;
 
-
                     .project-name {
                         font-size: 24px;
                         font-weight: 400;
@@ -101,7 +100,10 @@
                     height: auto;
                     width: auto;
                     max-width: 60%;
-                    border-radius: var(--paper-radius, var(--mantine-radius-default));
+                    border-radius: var(
+                        --paper-radius,
+                        var(--mantine-radius-default)
+                    );
                     box-shadow: var(--paper-shadow, none);
                 }
 
@@ -133,7 +135,19 @@
     }
 }
 
-.mantine-Modal-root .desc-renderer {
-    max-height: 70vh;
-    overflow-y: auto;
+.mantine-Modal-root {
+    .mantine-Modal-header {
+        padding-right: 24px;
+
+        .mantine-Modal-close {
+            position: absolute;
+            top: 16px;
+            right: 16px;
+        }
+    }
+    
+    .desc-renderer {
+        max-height: 70vh;
+        overflow-y: auto;
+    }
 }
