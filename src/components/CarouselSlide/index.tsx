@@ -6,9 +6,12 @@ import {
     Blockquote,
     Box,
     Group,
+    Modal,
     Paper,
+    Space,
     Stack,
     Text,
+    Title,
     Tooltip,
 } from "@mantine/core";
 import { useMediaQuery } from "@mantine/hooks";
@@ -28,6 +31,7 @@ export function CarouselSlide({
     index: number;
 }) {
     const mini = useMediaQuery("(max-width: 1000px)");
+    const [details, setDetails] = useState(false);
 
     const [desc, setDesc] = useState<ReactNode>(<></>);
     useEffect(() => {
@@ -57,7 +61,16 @@ export function CarouselSlide({
                 filter: currentSlide === index ? "none" : "blur(8px)",
             }}
         >
-            <Paper radius={"md"} p="md" className="slide-wrapper">
+            <Paper
+                radius={"md"}
+                p="md"
+                className={"slide-wrapper" + (mini ? " smol" : "")}
+                onClick={() => {
+                    if (mini) {
+                        setDetails(true);
+                    }
+                }}
+            >
                 <img className="slide-bg" src={project.image} />
                 <Box className={"slide-content" + (mini ? " mini" : "")}>
                     {mini ? (
@@ -105,10 +118,14 @@ export function CarouselSlide({
                                         </Badge>
                                     ))}
                                 </Group>
-                                <Blockquote className="project-description">
-                                    {desc}
+                                <Blockquote
+                                    className="project-description"
+                                    onClick={() => setDetails(true)}
+                                >
+                                    <div className="desc-renderer">{desc}</div>
                                 </Blockquote>
                             </Stack>
+                            <Space w="md" />
                             <img
                                 className="project-image"
                                 src={project.image}
@@ -123,6 +140,9 @@ export function CarouselSlide({
                                         className="project-url"
                                         size="xl"
                                         radius="xl"
+                                        onClick={() =>
+                                            window.open(project.url, "_blank")
+                                        }
                                     >
                                         <MdLink size={24} />
                                     </ActionIcon>
@@ -132,6 +152,30 @@ export function CarouselSlide({
                     )}
                 </Box>
             </Paper>
+            <Modal
+                size="auto"
+                title={
+                    <Stack gap="sm">
+                        <Title order={3}>{project.name}</Title>
+                        <Group gap="xs" justify="left">
+                            {project.tags.map((tag) => (
+                                <Badge
+                                    color="accent.3"
+                                    key={tag}
+                                    className="tag"
+                                    size="lg"
+                                >
+                                    {tag}
+                                </Badge>
+                            ))}
+                        </Group>
+                    </Stack>
+                }
+                opened={details}
+                onClose={() => setDetails(false)}
+            >
+                <div className="desc-renderer">{desc}</div>
+            </Modal>
         </Carousel.Slide>
     );
 }

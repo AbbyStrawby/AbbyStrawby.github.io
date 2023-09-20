@@ -2,9 +2,18 @@
     transition: opacity 0.2s;
 
     .slide-wrapper {
-        height: "100%";
-        position: "relative";
-        overflow: "hidden";
+        height: 100%;
+        position: relative;
+        overflow: hidden;
+
+        &.smol {
+            cursor: pointer;
+            transition: filter 0.2s;
+
+            &:hover {
+                filter: brightness(1.2);
+            }
+        }
 
         .slide-bg {
             filter: opacity(25%) blur(4px);
@@ -91,6 +100,7 @@
                     flex-grow: 1;
                     height: auto;
                     width: auto;
+                    max-width: 60%;
                     border-radius: var(--paper-radius, var(--mantine-radius-default));
                     box-shadow: var(--paper-shadow, none);
                 }
@@ -108,5 +118,17 @@
                 }
             }
         }
+    }
+}
+
+.desc-renderer {
+    display: inline-block;
+    width: 100%;
+    height: fit-content;
+
+    img {
+        width: auto;
+        max-width: 100%;
+        height: auto;
     }
 }
