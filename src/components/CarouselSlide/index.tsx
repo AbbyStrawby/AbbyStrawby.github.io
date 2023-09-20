@@ -169,6 +169,9 @@ export function CarouselSlide({
                                 </Badge>
                             ))}
                         </Group>
+                        {mini && project.url && (
+                            <a href={project.url}>Project Link</a>
+                        )}
                     </Stack>
                 }
                 opened={details}
