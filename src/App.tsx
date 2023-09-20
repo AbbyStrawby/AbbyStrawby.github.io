@@ -19,6 +19,7 @@ import { ListCategory } from "./components/ListCategory";
 import { useMemo, useState } from "react";
 import { Carousel } from "@mantine/carousel";
 import { CarouselSlide } from "./components/CarouselSlide";
+import { useMediaQuery } from "@mantine/hooks";
 
 function ApplicationBody() {
     const theme = useTheme();
@@ -26,6 +27,7 @@ function ApplicationBody() {
     const [project, setProject] = useState(0);
 
     const normalizedTheme = useMemo(() => createTheme(theme), [theme]);
+    const mini = useMediaQuery("(max-width: 1000px)");
 
     return (
         <>
@@ -86,7 +88,8 @@ function ApplicationBody() {
                                 onSlideChange={setProject}
                                 height={"100%"}
                                 style={{ flex: 1 }}
-                                withIndicators
+                                withIndicators={!mini}
+                                className="project-spinner"
                             >
                                 {config.projects.map((p, i) => (
                                     <CarouselSlide

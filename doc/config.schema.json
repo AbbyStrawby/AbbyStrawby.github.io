@@ -2,11 +2,46 @@
   "$ref": "#/definitions/ConfigRoot",
   "$schema": "http://json-schema.org/draft-07/schema#",
   "definitions": {
-    "ConfigProject": {
+    "ConfigHeader": {
       "additionalProperties": false,
       "properties": {
-        "description": {
-          "type": "string"
+        "backdrop": {
+          "anyOf": [
+            {
+              "additionalProperties": false,
+              "properties": {
+                "type": {
+                  "const": "image",
+                  "type": "string"
+                },
+                "url": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "type",
+                "url"
+              ],
+              "type": "object"
+            },
+            {
+              "additionalProperties": false,
+              "properties": {
+                "color": {
+                  "type": "string"
+                },
+                "type": {
+                  "const": "color",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "type",
+                "color"
+              ],
+              "type": "object"
+            }
+          ]
         },
         "image": {
           "type": "string"
@@ -14,23 +49,81 @@
         "name": {
           "type": "string"
         },
-        "tags": {
-          "items": {
-            "type": "string"
-          },
-          "type": "array"
-        },
-        "url": {
+        "subheader": {
           "type": "string"
         }
       },
       "required": [
         "name",
-        "description",
-        "tags",
-        "image"
+        "subheader",
+        "image",
+        "backdrop"
       ],
       "type": "object"
+    },
+    "ConfigProject": {
+      "anyOf": [
+        {
+          "additionalProperties": false,
+          "properties": {
+            "description": {
+              "type": "string"
+            },
+            "image": {
+              "type": "string"
+            },
+            "name": {
+              "type": "string"
+            },
+            "tags": {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "url": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "description",
+            "image",
+            "name",
+            "tags"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "descriptionUrl": {
+              "type": "string"
+            },
+            "image": {
+              "type": "string"
+            },
+            "name": {
+              "type": "string"
+            },
+            "tags": {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "url": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "descriptionUrl",
+            "image",
+            "name",
+            "tags"
+          ],
+          "type": "object"
+        }
+      ]
     },
     "ConfigRoot": {
       "additionalProperties": false,
@@ -51,63 +144,7 @@
           "type": "array"
         },
         "header": {
-          "additionalProperties": false,
-          "properties": {
-            "backdrop": {
-              "anyOf": [
-                {
-                  "additionalProperties": false,
-                  "properties": {
-                    "type": {
-                      "const": "image",
-                      "type": "string"
-                    },
-                    "url": {
-                      "type": "string"
-                    }
-                  },
-                  "required": [
-                    "type",
-                    "url"
-                  ],
-                  "type": "object"
-                },
-                {
-                  "additionalProperties": false,
-                  "properties": {
-                    "color": {
-                      "type": "string"
-                    },
-                    "type": {
-                      "const": "color",
-                      "type": "string"
-                    }
-                  },
-                  "required": [
-                    "type",
-                    "color"
-                  ],
-                  "type": "object"
-                }
-              ]
-            },
-            "image": {
-              "type": "string"
-            },
-            "name": {
-              "type": "string"
-            },
-            "subheader": {
-              "type": "string"
-            }
-          },
-          "required": [
-            "name",
-            "subheader",
-            "image",
-            "backdrop"
-          ],
-          "type": "object"
+          "$ref": "#/definitions/ConfigHeader"
         },
         "projects": {
           "items": {

@@ -1,0 +1,112 @@
+.carousel-slide {
+    transition: opacity 0.2s;
+
+    .slide-wrapper {
+        height: "100%";
+        position: "relative";
+        overflow: "hidden";
+
+        .slide-bg {
+            filter: opacity(25%) blur(4px);
+            position: absolute;
+            top: 50%;
+            left: 0px;
+            display: inline-block;
+            width: 100%;
+            height: auto;
+            transform: translate(0, -50%);
+            pointer-events: none;
+            user-select: none;
+        }
+
+        .slide-content {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            display: inline-block;
+            width: 100%;
+            height: 100%;
+            z-index: 10;
+
+            &.mini {
+                .main-content {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    display: inline-block;
+                    width: fit-content;
+                    max-width: 95%;
+
+                    .project-name {
+                        text-align: center;
+                        margin-bottom: 8px;
+                    }
+
+                    .project-tags {
+                        width: fit-content;
+                    }
+                }
+            }
+
+            &:not(.mini) {
+                padding: 32px;
+                display: flex;
+                flex-direction: row;
+
+                .main-content {
+                    position: relative;
+                    display: flex;
+                    flex-grow: 2;
+                    max-width: 40%;
+
+
+                    .project-name {
+                        font-size: 24px;
+                        font-weight: 400;
+                    }
+
+                    .project-tags {
+                        width: fit-content;
+                    }
+
+                    .project-description {
+                        text-overflow: ellipsis;
+                        flex-shrink: 1;
+                        overflow: hidden;
+                        margin-bottom: 64px;
+                        cursor: pointer;
+                        transition: filter 0.2s;
+
+                        &:hover {
+                            filter: brightness(1.5);
+                        }
+                    }
+                }
+
+                .project-image {
+                    --paper-radius: var(--mantine-radius-md);
+                    --paper-shadow: var(--mantine-shadow-md);
+                    display: flex;
+                    flex-grow: 1;
+                    height: auto;
+                    width: auto;
+                    border-radius: var(--paper-radius, var(--mantine-radius-default));
+                    box-shadow: var(--paper-shadow, none);
+                }
+
+                .project-url {
+                    position: absolute;
+                    bottom: 32px;
+                    left: 32px;
+                    transition: transform 0.2s;
+                    transform-origin: center;
+
+                    &:hover {
+                        transform: rotate(22deg);
+                    }
+                }
+            }
+        }
+    }
+}

@@ -14,24 +14,32 @@
     "projects": [
         {
             "name": "Frogger 2",
-            "description": "IDK a gay frog man or smth I wasn't paying attention. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse consectetur, elit et convallis dictum, sapien massa tristique risus, quis vestibulum massa purus quis velit. Morbi vitae nulla lacus. Curabitur interdum convallis velit ut gravida. Nullam in velit magna. Vestibulum mollis ipsum congue, fringilla urna id, efficitur odio. Praesent ac dolor erat. Quisque sagittis lobortis nisl eget vehicula. Vestibulum facilisis pulvinar sapien, nec finibus ex fermentum at. Donec id mattis nibh, pellentesque laoreet nisi.",
+            "description": {
+                "type": "text",
+                "text": "Lesbians! Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse consectetur, elit et convallis dictum, sapien massa tristique risus, quis vestibulum massa purus quis velit. Morbi vitae nulla lacus. Curabitur interdum convallis velit ut gravida. Nullam in velit magna. Vestibulum mollis ipsum congue, fringilla urna id, efficitur odio. Praesent ac dolor erat. Quisque sagittis lobortis nisl eget vehicula. Vestibulum facilisis pulvinar sapien, nec finibus ex fermentum at. Donec id mattis nibh, pellentesque laoreet nisi."
+            },
             "tags": ["Frogs", "Unity", "Tongue"],
             "url": "https://www.darkroastedblend.com/2013/10/wildly-funny-frogs.html",
             "image": "https://lh5.googleusercontent.com/_hVOW2U7K4-M/SpcGevkjpII/AAAAAAABFlE/A9SlbUR-UzQ/s800/060_pics.jpg"
         },
         {
             "name": "Frogger 3: Lesbians",
-            "description": "Lesbians! Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse consectetur, elit et convallis dictum, sapien massa tristique risus, quis vestibulum massa purus quis velit. Morbi vitae nulla lacus. Curabitur interdum convallis velit ut gravida. Nullam in velit magna. Vestibulum mollis ipsum congue, fringilla urna id, efficitur odio. Praesent ac dolor erat. Quisque sagittis lobortis nisl eget vehicula. Vestibulum facilisis pulvinar sapien, nec finibus ex fermentum at. Donec id mattis nibh, pellentesque laoreet nisi.",
+            "description": {
+                "type": "text",
+                "text": "Lesbians! Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse consectetur, elit et convallis dictum, sapien massa tristique risus, quis vestibulum massa purus quis velit. Morbi vitae nulla lacus. Curabitur interdum convallis velit ut gravida. Nullam in velit magna. Vestibulum mollis ipsum congue, fringilla urna id, efficitur odio. Praesent ac dolor erat. Quisque sagittis lobortis nisl eget vehicula. Vestibulum facilisis pulvinar sapien, nec finibus ex fermentum at. Donec id mattis nibh, pellentesque laoreet nisi."
+            },
             "tags": ["Jumping", "Bouncing", "The Orb"],
-            "url": "https://www.darkroastedblend.com/2013/10/wildly-funny-frogs.html",
             "image": "https://lh3.googleusercontent.com/-0PRIR1hepEA/T2QoPYqZdII/AAAAAAABqQw/xvP2kJ7a7wk/s800/9a8daa4571b9aa561f9964f58fa8ce90.jpg"
         },
         {
             "name": "Frogger 4: Lesbians",
-            "description": "Lesbians! Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse consectetur, elit et convallis dictum, sapien massa tristique risus, quis vestibulum massa purus quis velit. Morbi vitae nulla lacus. Curabitur interdum convallis velit ut gravida. Nullam in velit magna. Vestibulum mollis ipsum congue, fringilla urna id, efficitur odio. Praesent ac dolor erat. Quisque sagittis lobortis nisl eget vehicula. Vestibulum facilisis pulvinar sapien, nec finibus ex fermentum at. Donec id mattis nibh, pellentesque laoreet nisi.",
             "tags": ["Jumping", "Bouncing", "The Orb"],
-            "url": "https://www.darkroastedblend.com/2013/10/wildly-funny-frogs.html",
-            "image": "https://lh3.googleusercontent.com/-0PRIR1hepEA/T2QoPYqZdII/AAAAAAABqQw/xvP2kJ7a7wk/s800/9a8daa4571b9aa561f9964f58fa8ce90.jpg"
+            "image": "https://lh3.googleusercontent.com/-0PRIR1hepEA/T2QoPYqZdII/AAAAAAABqQw/xvP2kJ7a7wk/s800/9a8daa4571b9aa561f9964f58fa8ce90.jpg",
+            "description": {
+                "type": "url",
+                "url": "/conf/projects/frogger4/main.md"
+            },
+            "url": "https://www.darkroastedblend.com/2013/10/wildly-funny-frogs.html"
         }
     ],
     "themes": {

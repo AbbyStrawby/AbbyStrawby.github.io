@@ -41,6 +41,7 @@ export function ListCategory({
                         key={i}
                         style={{
                             paddingTop: "4px",
+                            zIndex: 2,
                         }}
                         variant="gradient"
                         gradient={{
@@ -65,7 +66,8 @@ export function ListCategory({
                     paddingLeft: "4px",
                     backgroundColor: "var(--mantine-color-dark-7)",
                     userSelect: "none",
-                    opacity: 0.8,
+                    color: "#ffffffcc",
+                    zIndex: 0,
                 }}
             >
                 {metamap[category].name}

@@ -25,10 +25,18 @@ export type ConfigHeader = {
 
 export type ConfigProject = {
     name: string;
-    description: string;
     tags: string[];
     url?: string;
     image: string;
+    description:
+        | {
+              type: "text";
+              text: string;
+          }
+        | {
+              type: "url";
+              url: string;
+          };
 };
 
 export type ThemeOverride =
