@@ -62,68 +62,69 @@
       "type": "object"
     },
     "ConfigProject": {
-      "anyOf": [
-        {
-          "additionalProperties": false,
-          "properties": {
-            "description": {
-              "type": "string"
-            },
-            "image": {
-              "type": "string"
-            },
-            "name": {
-              "type": "string"
-            },
-            "tags": {
-              "items": {
-                "type": "string"
+      "additionalProperties": false,
+      "properties": {
+        "description": {
+          "anyOf": [
+            {
+              "additionalProperties": false,
+              "properties": {
+                "text": {
+                  "type": "string"
+                },
+                "type": {
+                  "const": "text",
+                  "type": "string"
+                }
               },
-              "type": "array"
+              "required": [
+                "type",
+                "text"
+              ],
+              "type": "object"
             },
-            "url": {
-              "type": "string"
+            {
+              "additionalProperties": false,
+              "properties": {
+                "type": {
+                  "const": "url",
+                  "type": "string"
+                },
+                "url": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "type",
+                "url"
+              ],
+              "type": "object"
             }
-          },
-          "required": [
-            "description",
-            "image",
-            "name",
-            "tags"
-          ],
-          "type": "object"
+          ]
         },
-        {
-          "additionalProperties": false,
-          "properties": {
-            "descriptionUrl": {
-              "type": "string"
-            },
-            "image": {
-              "type": "string"
-            },
-            "name": {
-              "type": "string"
-            },
-            "tags": {
-              "items": {
-                "type": "string"
-              },
-              "type": "array"
-            },
-            "url": {
-              "type": "string"
-            }
+        "image": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "tags": {
+          "items": {
+            "$ref": "#/definitions/ConfigTag"
           },
-          "required": [
-            "descriptionUrl",
-            "image",
-            "name",
-            "tags"
-          ],
-          "type": "object"
+          "type": "array"
+        },
+        "url": {
+          "type": "string"
         }
-      ]
+      },
+      "required": [
+        "name",
+        "tags",
+        "image",
+        "description"
+      ],
+      "type": "object"
     },
     "ConfigRoot": {
       "additionalProperties": false,
@@ -133,13 +134,13 @@
         },
         "education": {
           "items": {
-            "type": "string"
+            "$ref": "#/definitions/ConfigTag"
           },
           "type": "array"
         },
         "experiences": {
           "items": {
-            "type": "string"
+            "$ref": "#/definitions/ConfigTag"
           },
           "type": "array"
         },
@@ -154,7 +155,7 @@
         },
         "skills": {
           "items": {
-            "type": "string"
+            "$ref": "#/definitions/ConfigTag"
           },
           "type": "array"
         },
@@ -175,6 +176,29 @@
         "defaultTheme"
       ],
       "type": "object"
+    },
+    "ConfigTag": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "icon": {
+              "type": "string"
+            },
+            "text": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "text",
+            "icon"
+          ],
+          "type": "object"
+        }
+      ]
     },
     "ThemeConfig": {
       "additionalProperties": false,

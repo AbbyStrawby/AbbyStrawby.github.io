@@ -1,6 +1,8 @@
 import { Badge, Group, Paper } from "@mantine/core";
 import { useConfig } from "./ApplicationStateProvider";
 import { MdCheckCircle, MdExplore, MdSchool } from "react-icons/md";
+import { isString } from "lodash";
+import { GeneralIcon } from "./GeneralIcon";
 
 const metamap = {
     skills: {
@@ -50,7 +52,17 @@ export function ListCategory({
                             to: "accent.3",
                         }}
                     >
-                        {item}
+                        {isString(item) ? (
+                            item
+                        ) : (
+                            <Group gap="sm">
+                                <GeneralIcon
+                                    iconName={item.icon as any}
+                                    size={18}
+                                />
+                                <span>{item.text}</span>
+                            </Group>
+                        )}
                     </Badge>
                 ))}
             </Group>

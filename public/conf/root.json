@@ -8,7 +8,13 @@
         },
         "image": "https://avatars.githubusercontent.com/u/76229782?v=4"
     },
-    "education": ["School", "RIT"],
+    "education": [
+        "School",
+        {
+            "text": "RIT",
+            "icon": "MdStar"
+        }
+    ],
     "experiences": ["Lots", "Of", "Them"],
     "skills": ["Being Smart", "Game Design"],
     "projects": [
@@ -18,7 +24,14 @@
                 "type": "text",
                 "text": "Lesbians! Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse consectetur, elit et convallis dictum, sapien massa tristique risus, quis vestibulum massa purus quis velit. Morbi vitae nulla lacus. Curabitur interdum convallis velit ut gravida. Nullam in velit magna. Vestibulum mollis ipsum congue, fringilla urna id, efficitur odio. Praesent ac dolor erat. Quisque sagittis lobortis nisl eget vehicula. Vestibulum facilisis pulvinar sapien, nec finibus ex fermentum at. Donec id mattis nibh, pellentesque laoreet nisi."
             },
-            "tags": ["Frogs", "Unity", "Tongue"],
+            "tags": [
+                "Frogs",
+                {
+                    "text": "Godot",
+                    "icon": "SiGodotengine"
+                },
+                "Tongue"
+            ],
             "url": "https://www.darkroastedblend.com/2013/10/wildly-funny-frogs.html",
             "image": "https://lh5.googleusercontent.com/_hVOW2U7K4-M/SpcGevkjpII/AAAAAAABFlE/A9SlbUR-UzQ/s800/060_pics.jpg"
         },

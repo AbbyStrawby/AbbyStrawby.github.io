@@ -20,6 +20,8 @@ import { MdLink } from "react-icons/md";
 import { ReactNode, useEffect, useState } from "react";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
+import { isString } from "lodash";
+import { GeneralIcon } from "../GeneralIcon";
 
 export function CarouselSlide({
     project,
@@ -81,13 +83,23 @@ export function CarouselSlide({
                                 className="project-tags"
                                 justify="center"
                             >
-                                {project.tags.map((tag) => (
+                                {project.tags.map((tag, i) => (
                                     <Badge
                                         color="accent.3"
-                                        key={tag}
+                                        key={i}
                                         className="tag"
                                     >
-                                        {tag}
+                                        {isString(tag) ? (
+                                            tag
+                                        ) : (
+                                            <Group gap="sm">
+                                                <GeneralIcon
+                                                    iconName={tag.icon as any}
+                                                    size={12}
+                                                />
+                                                <span>{tag.text}</span>
+                                            </Group>
+                                        )}
                                     </Badge>
                                 ))}
                             </Group>
@@ -107,14 +119,26 @@ export function CarouselSlide({
                                     className="project-tags"
                                     justify="center"
                                 >
-                                    {project.tags.map((tag) => (
+                                    {project.tags.map((tag, i) => (
                                         <Badge
                                             color="accent.3"
-                                            key={tag}
+                                            key={i}
                                             className="tag"
                                             size="lg"
                                         >
-                                            {tag}
+                                            {isString(tag) ? (
+                                                tag
+                                            ) : (
+                                                <Group gap="sm">
+                                                    <GeneralIcon
+                                                        iconName={
+                                                            tag.icon as any
+                                                        }
+                                                        size={12}
+                                                    />
+                                                    <span>{tag.text}</span>
+                                                </Group>
+                                            )}
                                         </Badge>
                                     ))}
                                 </Group>
@@ -158,14 +182,24 @@ export function CarouselSlide({
                     <Stack gap="sm">
                         <Title order={3}>{project.name}</Title>
                         <Group gap="xs" justify="left">
-                            {project.tags.map((tag) => (
+                            {project.tags.map((tag, i) => (
                                 <Badge
                                     color="accent.3"
-                                    key={tag}
+                                    key={i}
                                     className="tag"
                                     size="lg"
                                 >
-                                    {tag}
+                                    {isString(tag) ? (
+                                        tag
+                                    ) : (
+                                        <Group gap="sm">
+                                            <GeneralIcon
+                                                iconName={tag.icon as any}
+                                                size={12}
+                                            />
+                                            <span>{tag.text}</span>
+                                        </Group>
+                                    )}
                                 </Badge>
                             ))}
                         </Group>

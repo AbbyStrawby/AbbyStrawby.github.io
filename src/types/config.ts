@@ -1,12 +1,19 @@
 export type ConfigRoot = {
     header: ConfigHeader;
-    skills: string[];
-    education: string[];
-    experiences: string[];
+    skills: ConfigTag[];
+    education: ConfigTag[];
+    experiences: ConfigTag[];
     projects: ConfigProject[];
     themes: { [key: string]: ThemeConfig };
     defaultTheme: string;
 };
+
+export type ConfigTag =
+    | string
+    | {
+          text: string;
+          icon: string;
+      };
 
 export type ConfigHeader = {
     name: string; // Name (ie Abby)
@@ -25,7 +32,7 @@ export type ConfigHeader = {
 
 export type ConfigProject = {
     name: string;
-    tags: string[];
+    tags: ConfigTag[];
     url?: string;
     image: string;
     description:
