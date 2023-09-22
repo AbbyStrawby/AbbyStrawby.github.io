@@ -63,6 +63,16 @@
                 "primary": "#FE46A8",
                 "accent": "#FE9C46"
             }
+        },
+        "test": {
+            "conditions": {
+                "project": "Frogger 4: Lesbians"
+            },
+            "colors": {
+                "background": "#ffffff",
+                "primary": "#0000ff",
+                "accent": "#ff0000"
+            }
         }
     },
     "defaultTheme": "default"

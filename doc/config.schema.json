@@ -203,9 +203,6 @@
     "ThemeConfig": {
       "additionalProperties": false,
       "properties": {
-        "backgroundImage": {
-          "type": "string"
-        },
         "colors": {
           "additionalProperties": false,
           "properties": {
@@ -285,21 +282,6 @@
             }
           },
           "type": "object"
-        },
-        "overrides": {
-          "additionalProperties": false,
-          "properties": {
-            "banner": {
-              "$ref": "#/definitions/ThemeOverride"
-            },
-            "carousel": {
-              "$ref": "#/definitions/ThemeOverride"
-            },
-            "footer": {
-              "$ref": "#/definitions/ThemeOverride"
-            }
-          },
-          "type": "object"
         }
       },
       "required": [
@@ -307,64 +289,6 @@
         "colors"
       ],
       "type": "object"
-    },
-    "ThemeOverride": {
-      "anyOf": [
-        {
-          "additionalProperties": false,
-          "properties": {
-            "color": {
-              "type": "string"
-            },
-            "type": {
-              "const": "color",
-              "type": "string"
-            }
-          },
-          "required": [
-            "type",
-            "color"
-          ],
-          "type": "object"
-        },
-        {
-          "additionalProperties": false,
-          "properties": {
-            "colors": {
-              "items": {
-                "type": "string"
-              },
-              "type": "array"
-            },
-            "type": {
-              "const": "gradient",
-              "type": "string"
-            }
-          },
-          "required": [
-            "type",
-            "colors"
-          ],
-          "type": "object"
-        },
-        {
-          "additionalProperties": false,
-          "properties": {
-            "type": {
-              "const": "image",
-              "type": "string"
-            },
-            "url": {
-              "type": "string"
-            }
-          },
-          "required": [
-            "type",
-            "url"
-          ],
-          "type": "object"
-        }
-      ]
     }
   }
 }

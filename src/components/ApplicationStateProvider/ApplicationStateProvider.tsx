@@ -57,6 +57,8 @@ export function ApplicationStateProvider({
                 }
             }
 
+            console.log(selectedTheme);
+
             setTheme({
                 colors: {
                     gray: isArray(selectedTheme.colors.background)

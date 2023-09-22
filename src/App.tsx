@@ -11,12 +11,13 @@ import {
 import {
     ApplicationStateProvider,
     useConfig,
+    useProject,
     useTheme,
 } from "./components/ApplicationStateProvider";
 
 import "./app.scss";
 import { ListCategory } from "./components/ListCategory";
-import { useMemo, useState } from "react";
+import { useMemo } from "react";
 import { Carousel } from "@mantine/carousel";
 import { CarouselSlide } from "./components/CarouselSlide";
 import { useMediaQuery } from "@mantine/hooks";
@@ -24,7 +25,7 @@ import { useMediaQuery } from "@mantine/hooks";
 function ApplicationBody() {
     const theme = useTheme();
     const config = useConfig();
-    const [project, setProject] = useState(0);
+    const [project, setProject] = useProject();
 
     const normalizedTheme = useMemo(() => createTheme(theme), [theme]);
     const mini = useMediaQuery("(max-width: 1000px)");
@@ -96,7 +97,7 @@ function ApplicationBody() {
                                         project={p}
                                         key={i}
                                         index={i}
-                                        currentSlide={project}
+                                        currentSlide={project[1]}
                                     />
                                 ))}
                             </Carousel>

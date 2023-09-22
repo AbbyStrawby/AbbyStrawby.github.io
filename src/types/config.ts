@@ -75,10 +75,4 @@ export type ThemeConfig = {
         primary: string | string[];
         accent: string | string[];
     };
-    backgroundImage?: string;
-    overrides?: Partial<{
-        banner: ThemeOverride;
-        footer: ThemeOverride;
-        carousel: ThemeOverride;
-    }>;
 };
