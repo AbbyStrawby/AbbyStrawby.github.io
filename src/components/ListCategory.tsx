@@ -42,7 +42,6 @@ export function ListCategory({
                         size="lg"
                         key={i}
                         style={{
-                            paddingTop: "4px",
                             zIndex: 2,
                         }}
                         variant="gradient"
