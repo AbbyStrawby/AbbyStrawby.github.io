@@ -4,8 +4,16 @@ export type ConfigRoot = {
     education: ConfigTag[];
     experiences: ConfigTag[];
     projects: ConfigProject[];
+    contact: ContactConfig[];
     themes: { [key: string]: ThemeConfig };
     defaultTheme: string;
+};
+
+export type ContactConfig = {
+    icon: string;
+    name: string;
+    link?: string;
+    value: string;
 };
 
 export type ConfigTag =

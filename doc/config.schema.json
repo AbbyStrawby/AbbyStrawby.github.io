@@ -129,6 +129,32 @@
     "ConfigRoot": {
       "additionalProperties": false,
       "properties": {
+        "contact": {
+          "items": {
+            "additionalProperties": false,
+            "properties": {
+              "icon": {
+                "type": "string"
+              },
+              "link": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "value": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "icon",
+              "name",
+              "value"
+            ],
+            "type": "object"
+          },
+          "type": "array"
+        },
         "defaultTheme": {
           "type": "string"
         },
@@ -172,6 +198,7 @@
         "education",
         "experiences",
         "projects",
+        "contact",
         "themes",
         "defaultTheme"
       ],

@@ -55,6 +55,19 @@
             "url": "https://www.darkroastedblend.com/2013/10/wildly-funny-frogs.html"
         }
     ],
+    "contact": [
+        {
+            "icon": "MdEmail",
+            "name": "Email",
+            "link": "mailto:froggy@gmail.com",
+            "value": "froggy@gmail.com"
+        },
+        {
+            "icon": "FaDiscord",
+            "name": "Discord",
+            "value": "@froggy"
+        }
+    ],
     "themes": {
         "default": {
             "conditions": {},

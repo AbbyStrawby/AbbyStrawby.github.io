@@ -21,6 +21,7 @@ import { useMemo } from "react";
 import { Carousel } from "@mantine/carousel";
 import { CarouselSlide } from "./components/CarouselSlide";
 import { useMediaQuery } from "@mantine/hooks";
+import { ContactItem } from "./components/ContactItem";
 
 function ApplicationBody() {
     const theme = useTheme();
@@ -58,6 +59,14 @@ function ApplicationBody() {
                                 <Title order={3}>
                                     {config.header.subheader}
                                 </Title>
+                            </Stack>
+                            <Stack
+                                className="contact-list"
+                                gap={mini ? "sm" : "lg"}
+                            >
+                                {config.contact.map((c, i) => (
+                                    <ContactItem key={i} config={c} />
+                                ))}
                             </Stack>
                         </Box>
                     </Box>
