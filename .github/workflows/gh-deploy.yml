@@ -30,6 +30,8 @@ jobs:
       - name: Vite Github Pages Deployer
         uses: skywarth/vite-github-pages-deployer@master
         id: deploy_to_pages
+        env:
+          NODE_OPTIONS: "--max_old_space_size=4096"
         with:
           package_manager: yarn
           public_base_path: /
