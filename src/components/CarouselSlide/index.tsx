@@ -61,6 +61,8 @@ export function CarouselSlide({
             style={{
                 opacity: currentSlide === index ? 1 : 0.25,
                 filter: currentSlide === index ? "none" : "blur(8px)",
+                pointerEvents: currentSlide === index ? "all" : "none",
+                userSelect: currentSlide === index ? "all" : "none",
             }}
         >
             <Paper
