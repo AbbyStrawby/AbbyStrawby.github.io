@@ -35,7 +35,14 @@ export function ListCategory({
             className="list-category"
             style={{ position: "relative" }}
         >
-            <Group gap="xs">
+            <Group
+                gap="xs"
+                style={{
+                    whiteSpace: "nowrap",
+                    overflowX: "auto",
+                    width: "100%",
+                }}
+            >
                 {metamap[category].icon}
                 {config[category].map((item, i) => (
                     <Badge
