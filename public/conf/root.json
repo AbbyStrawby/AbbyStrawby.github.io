@@ -1,7 +1,7 @@
 {
     "header": {
         "name": "Abby Doskey",
-        "subheader": "Game Development | Web Design",
+        "subheader": "Game Developer | Programmer",
         "backdrop": {
             "type": "image",
             "url": "https://wallpapercave.com/wp/4ZvLAPc.jpg"
@@ -9,45 +9,46 @@
         "image": "https://avatars.githubusercontent.com/u/76229782?v=4"
     },
     "education": [
-        "School",
         {
             "text": "RIT",
             "icon": "MdStar"
-        }
+        },
+        "Game Design/Development Major",
+        "3.9 GPA"
     ],
-    "experiences": ["Lots", "Of", "Them"],
-    "skills": ["Being Smart", "Game Design"],
+    "experiences": ["Academic Projects", "Calero Internship"],
+    "skills": ["Level Design", "Asset Production", "Game Design"],
     "projects": [
         {
-            "name": "Frogger 2",
+            "name": "Soulbinder",
             "description": {
-                "type": "text",
-                "text": "Lesbians! Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse consectetur, elit et convallis dictum, sapien massa tristique risus, quis vestibulum massa purus quis velit. Morbi vitae nulla lacus. Curabitur interdum convallis velit ut gravida. Nullam in velit magna. Vestibulum mollis ipsum congue, fringilla urna id, efficitur odio. Praesent ac dolor erat. Quisque sagittis lobortis nisl eget vehicula. Vestibulum facilisis pulvinar sapien, nec finibus ex fermentum at. Donec id mattis nibh, pellentesque laoreet nisi."
+                "type": "url",
+                "url": "/conf/projects/Soulbinder/main.md"
             },
             "tags": [
-                "Frogs",
                 {
-                    "text": "Godot",
-                    "icon": "SiGodotengine"
+                    "text": "MonoGame",
+                    "icon": "SiMonogame"
                 },
-                "Tongue"
+                "Level Design",
+                "Player Movement"
             ],
-            "url": "https://www.darkroastedblend.com/2013/10/wildly-funny-frogs.html",
-            "image": "https://lh5.googleusercontent.com/_hVOW2U7K4-M/SpcGevkjpII/AAAAAAABFlE/A9SlbUR-UzQ/s800/060_pics.jpg"
+            "url": "https://people.rit.edu/qjd5808/235/project1/",
+            "image": "/conf/projects/Soulbinder/TitleScreenV2.png"
         },
         {
-            "name": "Frogger 3: Lesbians",
+            "name": "Pass the Pain",
             "description": {
                 "type": "text",
                 "text": "Lesbians! Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse consectetur, elit et convallis dictum, sapien massa tristique risus, quis vestibulum massa purus quis velit. Morbi vitae nulla lacus. Curabitur interdum convallis velit ut gravida. Nullam in velit magna. Vestibulum mollis ipsum congue, fringilla urna id, efficitur odio. Praesent ac dolor erat. Quisque sagittis lobortis nisl eget vehicula. Vestibulum facilisis pulvinar sapien, nec finibus ex fermentum at. Donec id mattis nibh, pellentesque laoreet nisi."
             },
-            "tags": ["Jumping", "Bouncing", "The Orb"],
-            "image": "https://lh3.googleusercontent.com/-0PRIR1hepEA/T2QoPYqZdII/AAAAAAABqQw/xvP2kJ7a7wk/s800/9a8daa4571b9aa561f9964f58fa8ce90.jpg"
+            "tags": ["Card Game", "Card Design", "Balance", "Art"],
+            "image": "/conf/projects/PassThePain/BoxArt_Front.png"
         },
         {
-            "name": "Frogger 4: Lesbians",
-            "tags": ["Jumping", "Bouncing", "The Orb"],
-            "image": "https://lh3.googleusercontent.com/-0PRIR1hepEA/T2QoPYqZdII/AAAAAAABqQw/xvP2kJ7a7wk/s800/9a8daa4571b9aa561f9964f58fa8ce90.jpg",
+            "name": "Frog in the Mirror",
+            "tags": ["Godot", "Level Design", "Puzzle Design"],
+            "image": "/conf/projects/FrogintheMirror/FITM_Kipper.png",
             "description": {
                 "type": "url",
                 "url": "/conf/projects/frogger4/main.md"
@@ -59,8 +60,8 @@
         {
             "icon": "MdEmail",
             "name": "Email",
-            "link": "mailto:froggy@gmail.com",
-            "value": "froggy@gmail.com"
+            "link": "mailto:qjd5808@g.rit.edu",
+            "value": "qjd5808@g.rit.edu"
         },
         {
             "icon": "FaDiscord",
@@ -75,6 +76,36 @@
                 "background": "#424242",
                 "primary": "#FE46A8",
                 "accent": "#FE9C46"
+            }
+        },
+        "soulbinder": {
+            "conditions": {
+                "project": "Soulbinder"
+            },
+            "colors": {
+                "background": "#ffffff",
+                "primary": "#B85EE1",
+                "accent": "#333333"
+            }
+        },
+        "passthepain": {
+            "conditions": {
+                "project": "Pass the Pain"
+            },
+            "colors": {
+                "background": "#ffffff",
+                "primary": "#9b00f4",
+                "accent": "#e50063"
+            }
+        },
+        "froginthemirror": {
+            "conditions": {
+                "project": "Frog in the Mirror"
+            },
+            "colors": {
+                "background": "#ffffff",
+                "primary": "#4CFF9B",
+                "accent": "#4CFFF4"
             }
         },
         "test": {
