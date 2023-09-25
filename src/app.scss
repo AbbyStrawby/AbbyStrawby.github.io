@@ -108,3 +108,28 @@
         padding: 0px;
     }
 }
+
+.list-item {
+    position: relative;
+    width: fit-content !important;
+    margin-right: 8px;
+    .mantine-Badge-label {
+        position: relative !important;
+        width: fit-content;
+        display: inline-block;
+    }
+}
+
+.item-list {
+    width: calc(100% - 24px);
+    overflow-x: auto;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+    display: inline-block !important;
+    transform: translate(0, 2px);
+    z-index: 2;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}

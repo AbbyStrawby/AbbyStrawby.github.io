@@ -33,44 +33,43 @@ export function ListCategory({
             radius="sm"
             shadow="sm"
             className="list-category"
-            style={{ position: "relative" }}
+            style={{ position: "relative", whiteSpace: "nowrap" }}
         >
-            <Group
-                gap="xs"
-                style={{
-                    whiteSpace: "nowrap",
-                    overflowX: "auto",
-                    width: "100%",
-                }}
-            >
+            <Group gap="xs" wrap="nowrap">
                 {metamap[category].icon}
-                {config[category].map((item, i) => (
-                    <Badge
-                        size="lg"
-                        key={i}
-                        style={{
-                            zIndex: 2,
-                        }}
-                        variant="gradient"
-                        gradient={{
-                            deg: 90,
-                            from: "primary.3",
-                            to: "accent.3",
-                        }}
-                    >
-                        {isString(item) ? (
-                            item
-                        ) : (
-                            <Group gap="sm">
-                                <GeneralIcon
-                                    iconName={item.icon as any}
-                                    size={18}
-                                />
-                                <span>{item.text}</span>
-                            </Group>
-                        )}
-                    </Badge>
-                ))}
+                <Group gap="xs" wrap="nowrap" className="item-list">
+                    {config[category].map((item, i) => (
+                        <Badge
+                            size="lg"
+                            key={i}
+                            style={{
+                                zIndex: 2,
+                                width: "fit-content",
+                                display: "inline-block",
+                            }}
+                            variant="gradient"
+                            fullWidth
+                            gradient={{
+                                deg: 90,
+                                from: "primary.3",
+                                to: "accent.3",
+                            }}
+                            className="list-item"
+                        >
+                            {isString(item) ? (
+                                item
+                            ) : (
+                                <Group gap="sm">
+                                    <GeneralIcon
+                                        iconName={item.icon as any}
+                                        size={18}
+                                    />
+                                    <span>{item.text}</span>
+                                </Group>
+                            )}
+                        </Badge>
+                    ))}
+                </Group>
             </Group>
             <span
                 className="list-name"
