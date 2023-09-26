@@ -78,6 +78,7 @@ function ApplicationBody() {
                         style={{
                             marginTop: "8px",
                         }}
+                        className="list-categories"
                     >
                         <ListCategory category="skills" />
                         <ListCategory category="experiences" />

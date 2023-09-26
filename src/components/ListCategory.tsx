@@ -3,6 +3,7 @@ import { useConfig } from "./ApplicationStateProvider";
 import { MdCheckCircle, MdExplore, MdSchool } from "react-icons/md";
 import { isString } from "lodash";
 import { GeneralIcon } from "./GeneralIcon";
+import { useRef } from "react";
 
 const metamap = {
     skills: {
@@ -25,6 +26,20 @@ export function ListCategory({
     category: "skills" | "education" | "experiences";
 }) {
     const config = useConfig();
+    const scRef = useRef<HTMLDivElement>();
+
+    const handleScroll = (event: any) => {
+        const container = scRef.current;
+        if (!container) {
+            return;
+        }
+        const scrollAmount = event.deltaY;
+        container.scrollTo({
+            top: 0,
+            left: container.scrollLeft - scrollAmount,
+            behavior: "smooth",
+        });
+    };
 
     return (
         <Paper
@@ -37,7 +52,13 @@ export function ListCategory({
         >
             <Group gap="xs" wrap="nowrap">
                 {metamap[category].icon}
-                <Group gap="xs" wrap="nowrap" className="item-list">
+                <Group
+                    gap="xs"
+                    wrap="nowrap"
+                    className="item-list"
+                    ref={scRef as any}
+                    onWheel={handleScroll}
+                >
                     {config[category].map((item, i) => (
                         <Badge
                             size="lg"
