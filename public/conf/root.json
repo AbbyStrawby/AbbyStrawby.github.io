@@ -9,16 +9,22 @@
         "image": "https://avatars.githubusercontent.com/u/76229782?v=4"
     },
     "education": [
-        {
-            "text": "RIT",
-            "icon": "MdStar"
-        },
+        "RIT",
         "Game Design/Development Major",
         "3.9 GPA"
     ],
     "experiences": ["Academic Projects", "Calero Internship"],
-    "skills": ["Level Design", "Asset Production", "Game Design"],
+    "skills": ["Game Design", "Asset Production", "Level Design"],
     "projects": [
+        {
+            "name": "Pass the Pain",
+            "description": {
+                "type": "url",
+                "url": "/conf/projects/PassThePain/main.md"
+            },
+            "tags": ["Card Game", "Card Design", "Balance", "Art"],
+            "image": "/conf/projects/PassThePain/BoxArt_Front.png"
+        },
         {
             "name": "Soulbinder",
             "description": {
@@ -37,13 +43,13 @@
             "image": "/conf/projects/Soulbinder/TitleScreenV2.png"
         },
         {
-            "name": "Pass the Pain",
+            "name": "Witch's Respite",
             "description": {
-                "type": "text",
-                "text": "Lesbians! Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse consectetur, elit et convallis dictum, sapien massa tristique risus, quis vestibulum massa purus quis velit. Morbi vitae nulla lacus. Curabitur interdum convallis velit ut gravida. Nullam in velit magna. Vestibulum mollis ipsum congue, fringilla urna id, efficitur odio. Praesent ac dolor erat. Quisque sagittis lobortis nisl eget vehicula. Vestibulum facilisis pulvinar sapien, nec finibus ex fermentum at. Donec id mattis nibh, pellentesque laoreet nisi."
+                "type": "url",
+                "url": "/conf/projects/WitchsRespite/main.md"
             },
-            "tags": ["Card Game", "Card Design", "Balance", "Art"],
-            "image": "/conf/projects/PassThePain/BoxArt_Front.png"
+            "tags": ["Maya", "3D Modeling", "Texturing"],
+            "image": "/conf/projects/WitchsRespite/WR_PotionShop.png"
         },
         {
             "name": "Frog in the Mirror",
@@ -51,9 +57,8 @@
             "image": "/conf/projects/FrogintheMirror/FITM_Kipper.png",
             "description": {
                 "type": "url",
-                "url": "/conf/projects/frogger4/main.md"
-            },
-            "url": "https://www.darkroastedblend.com/2013/10/wildly-funny-frogs.html"
+                "url": "/conf/projects/FrogintheMirror/main.md"
+            }
         }
     ],
     "contact": [
@@ -64,9 +69,10 @@
             "value": "qjd5808@g.rit.edu"
         },
         {
-            "icon": "FaDiscord",
-            "name": "Discord",
-            "value": "@froggy"
+            "icon": "FaLinkedin",
+            "name": "LinkedIn",
+            "link": "https://www.linkedin.com/in/abby-doskey/",
+            "value": "https://www.linkedin.com/in/abby-doskey/"
         }
     ],
     "themes": {
@@ -94,8 +100,8 @@
             },
             "colors": {
                 "background": "#ffffff",
-                "primary": "#9b00f4",
-                "accent": "#e50063"
+                "primary": "#e50063",
+                "accent": "#9b00f4"
             }
         },
         "froginthemirror": {
