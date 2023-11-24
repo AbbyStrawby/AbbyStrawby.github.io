@@ -18,4 +18,14 @@ Experience a moment of quiet in this quaint witch's potion shop. Witch's Respite
 
 ## Process
 
-This was the final project in my 3D modeling class. We were tasked with creating an environment filled entirely with models we create. After deciding to depict a witch's potion shop and creating a diagram for the layout of the room, I began making the models. I did so using Maya, using primitive shapes as a base and then modifying them in increasingly complex ways to design the models I wanted. I ended up with a total of 15 different models, far more than was require for the project. As I modeled, I began using Unity to outline the environment using greyboxing to flesh out the layout of the shop in a 3D space, using a built in first person character controller to explore the space. Once all the models were complete, including one for the shop itself, I using Substance Painter 3D to assign textures to the UV map I created for each model. As I did that, I started replacing things in the greybox with the models. Once the textures were done, those were added onto all of the models, and final changes were made with lighting and particles to complete the scene.
+- Gathered reference images for the kind of area/aesthetic I wanted to create
+- Drew in Clip Studio Paint a top-down diagram of both floors of the shop with all of items arranged
+- Began using Maya to make models for the objects and the shop, making increasingly complicated models
+- Greyboxed the entire shop in Unity, where the project would all come together, with a first person character controller to get a feel for the space in 3 dimensions
+- Created a UV map for the models in Maya so that I could then use Substance Painter 3D to design textures for them
+- Arranged the finished 3D models in Unity, later adding the textures as well
+- Added finishing touches like lighting, particle effects, and subtle movement to enhance the atmosphere
+
+## Credit
+
+This was a solo project for a 3D modeling class.

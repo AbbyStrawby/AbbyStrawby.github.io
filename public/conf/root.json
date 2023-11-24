@@ -4,7 +4,7 @@
         "subheader": "Game Developer | Programmer",
         "backdrop": {
             "type": "image",
-            "url": "https://wallpapercave.com/wp/4ZvLAPc.jpg"
+            "url": "/conf/Calypsia.png"
         },
         "image": "/conf/abby.jpg"
     },
@@ -54,7 +54,7 @@
         {
             "name": "Frog in the Mirror",
             "tags": ["Godot", "Level Design", "Puzzle Design"],
-            "image": "/conf/projects/FrogintheMirror/FITM_Kipper.png",
+            "image": "/conf/projects/FrogintheMirror/GameplayScreenshot2.png",
             "description": {
                 "type": "url",
                 "url": "/conf/projects/FrogintheMirror/main.md"
