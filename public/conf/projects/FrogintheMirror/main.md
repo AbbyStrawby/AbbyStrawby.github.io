@@ -14,7 +14,7 @@ Get ready to leap into action in this 2D puzzle platformer. You play as Kipper, 
 
 ![The frog-like Spriggan Kipper stands on a box, just about to grapple to a wall.](/conf/projects/FrogintheMirror/GameplayScreenshot2.png "Look at Kipper go!")
 
-> Kipper about to grapple from a box
+> Kipper about to grapple from a box *
 
 
 ## Takeaways
@@ -25,8 +25,10 @@ Additionally, this project was the first time I got to employ the skills and tec
 
 ![Kipper stands inside a room with two closed doors on either side of him.](/conf/projects/FrogintheMirror/GameplayScreenshot3.png "How did he end up like this")
 
-> Kipper finds himself in a puzzling situation, as the button to open the exit closes him in
+> Kipper finds himself in a puzzling situation, as the button to open the exit closes him in *
 
 ## Credits
 
-Frog in the Mirror is a team project, by Kirby Saligo, Sam Castle, Abby Doskey, Edward Wheaton, and Chenyu Yang. It was developed August-December 2023
+Frog in the Mirror is a team project, by Kirby Saligo, Sam Castle, Abby Doskey, Edward Wheaton, and Chenyu Yang. It was developed September-December 2023
+
+*As of now, the game is still being worked on, so visuals are not yet finalized

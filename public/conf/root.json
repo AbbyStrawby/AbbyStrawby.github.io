@@ -17,6 +17,15 @@
     "skills": ["Game Design", "Asset Production", "Level Design"],
     "projects": [
         {
+            "name": "Frog in the Mirror",
+            "tags": ["Godot", "Level Design", "Puzzle Design"],
+            "image": "/conf/projects/FrogintheMirror/FITM_MainMenu.png",
+            "description": {
+                "type": "url",
+                "url": "/conf/projects/FrogintheMirror/main.md"
+            }
+        },
+        {
             "name": "Pass the Pain",
             "description": {
                 "type": "url",
@@ -50,15 +59,6 @@
             },
             "tags": ["Maya", "3D Modeling", "Texturing"],
             "image": "/conf/projects/WitchsRespite/WR_PotionShop.png"
-        },
-        {
-            "name": "Frog in the Mirror",
-            "tags": ["Godot", "Level Design", "Puzzle Design"],
-            "image": "/conf/projects/FrogintheMirror/GameplayScreenshot2.png",
-            "description": {
-                "type": "url",
-                "url": "/conf/projects/FrogintheMirror/main.md"
-            }
         }
     ],
     "contact": [
